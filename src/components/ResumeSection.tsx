@@ -272,15 +272,25 @@ export const ResumeSection: React.FC = () => {
             </div>
           </div>
 
-          {/* QR Code & Scan Section */}
+          {/* Dynamic Scannable QR Code & Recruiter Portal */}
           <div className="pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <QRCodeSVG size={100} url={PORTFOLIO_DATA.personal.socialLinks.github} />
-              <div>
-                <div className="text-sm font-bold text-white">Scan for Digital Portfolio</div>
-                <div className="text-xs text-cyan-400 font-mono mt-0.5">github.com/prasad1271</div>
-                <p className="text-[11px] text-slate-400 mt-1 max-w-xs leading-normal">
-                  QR Code links directly to live interactive portfolio & open-source repositories.
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-5">
+              <div className="p-1 rounded-2xl bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 shadow-lg shadow-cyan-500/20">
+                <QRCodeSVG
+                  size={105}
+                  url={PORTFOLIO_DATA.personal.socialLinks.github}
+                  darkColor="#090d16"
+                  lightColor="#ffffff"
+                />
+              </div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <Github className="w-4 h-4 text-cyan-400" />
+                  <span className="text-sm font-bold text-white">Scan for GitHub & Open Source</span>
+                </div>
+                <div className="text-xs text-cyan-400 font-mono">github.com/prasad1271</div>
+                <p className="text-[11px] text-slate-400 max-w-sm leading-normal">
+                  Point your phone camera at this verified QR code to open developer profile, PDD medical vision repository, and projects instantly.
                 </p>
               </div>
             </div>
