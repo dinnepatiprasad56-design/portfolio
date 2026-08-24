@@ -21,7 +21,8 @@ import { QRCodeSVG } from "./ui/QRCodeSVG";
 
 export const ResumeSection: React.FC = () => {
   const [showPdfEmbed, setShowPdfEmbed] = useState(false);
-  const pdfUrl = "/Placement_Resume.pdf";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const pdfUrl = `${basePath}/Placement_Resume.pdf`;
 
   return (
     <section id="resume" className="py-24 relative overflow-hidden bg-slate-950">
