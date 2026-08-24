@@ -106,6 +106,8 @@ export const PORTFOLIO_DATA = {
     cgpa: "8.96",
     socialLinks: {
       github: "https://github.com/prasad1271",
+      githubRepo: "https://github.com/dinnepatiprasad56-design/portfolio",
+      livePortfolio: "https://dinnepatiprasad56-design.github.io/portfolio/",
       linkedin: "https://linkedin.com/in/siddhu1234567890",
       leetcode: "https://leetcode.com/u/D_Sidhu_prasad/",
       email: "mailto:dinnipatiprasad@gmail.com",

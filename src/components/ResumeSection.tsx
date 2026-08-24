@@ -21,8 +21,38 @@ import { QRCodeSVG } from "./ui/QRCodeSVG";
 
 export const ResumeSection: React.FC = () => {
   const [showPdfEmbed, setShowPdfEmbed] = useState(false);
+  const [selectedQrType, setSelectedQrType] = useState<"github" | "live" | "repo" | "linkedin">("github");
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const pdfUrl = `${basePath}/Placement_Resume.pdf`;
+
+  const qrTargets = {
+    github: {
+      label: "GitHub Profile",
+      url: PORTFOLIO_DATA.personal.socialLinks.github,
+      displayUrl: "github.com/prasad1271",
+      description: "Direct camera scan to Sindhu Prasad's GitHub profile, repositories, and medical AI code.",
+    },
+    live: {
+      label: "Live Portfolio",
+      url: PORTFOLIO_DATA.personal.socialLinks.livePortfolio,
+      displayUrl: "dinnepatiprasad56-design.github.io/portfolio",
+      description: "Scan with mobile camera to open this live interactive portfolio web application instantly.",
+    },
+    repo: {
+      label: "GitHub Repo",
+      url: PORTFOLIO_DATA.personal.socialLinks.githubRepo,
+      displayUrl: "github.com/dinnepatiprasad56-design/portfolio",
+      description: "Scan to inspect the complete Next.js portfolio repository and GitHub Actions workflows.",
+    },
+    linkedin: {
+      label: "LinkedIn",
+      url: PORTFOLIO_DATA.personal.socialLinks.linkedin,
+      displayUrl: "linkedin.com/in/siddhu1234567890",
+      description: "Scan to connect directly on LinkedIn professional network.",
+    },
+  };
+
+  const activeQr = qrTargets[selectedQrType];
 
   return (
     <section id="resume" className="py-24 relative overflow-hidden bg-slate-950">
@@ -273,31 +303,62 @@ export const ResumeSection: React.FC = () => {
           </div>
 
           {/* Dynamic Scannable QR Code & Recruiter Portal */}
-          <div className="pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-6">
-            <div className="flex flex-wrap sm:flex-nowrap items-center gap-5">
-              <div className="p-1 rounded-2xl bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 shadow-lg shadow-cyan-500/20">
+          <div className="pt-6 border-t border-slate-800 space-y-4">
+            {/* QR Destination Selector Tabs */}
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-950 border border-slate-800">
+                {(Object.keys(qrTargets) as Array<keyof typeof qrTargets>).map((key) => (
+                  <button
+                    key={key}
+                    onClick={() => setSelectedQrType(key)}
+                    className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                      selectedQrType === key
+                        ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
+                        : "text-slate-400 hover:text-slate-200"
+                    }`}
+                  >
+                    {qrTargets[key].label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2 text-xs text-slate-400">
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                <span>Verified Candidate • CGPA 8.96 • SIMATS CSE</span>
+              </div>
+            </div>
+
+            {/* QR Code Container */}
+            <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-wrap sm:flex-nowrap items-center gap-5">
+              <div className="p-1.5 rounded-2xl bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 shadow-xl shadow-cyan-500/20 flex-shrink-0">
                 <QRCodeSVG
-                  size={105}
-                  url={PORTFOLIO_DATA.personal.socialLinks.github}
+                  size={110}
+                  url={activeQr.url}
                   darkColor="#090d16"
                   lightColor="#ffffff"
                 />
               </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <Github className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm font-bold text-white">Scan for GitHub & Open Source</span>
+              <div className="space-y-1.5 flex-1">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Github className="w-4 h-4 text-cyan-400" />
+                    <span className="text-sm font-bold text-white">{activeQr.label} QR Code</span>
+                  </div>
+                  <a
+                    href={activeQr.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1"
+                  >
+                    <span>Visit Link</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
-                <div className="text-xs text-cyan-400 font-mono">github.com/prasad1271</div>
-                <p className="text-[11px] text-slate-400 max-w-sm leading-normal">
-                  Point your phone camera at this verified QR code to open developer profile, PDD medical vision repository, and projects instantly.
+                <div className="text-xs text-cyan-400 font-mono font-medium">{activeQr.displayUrl}</div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {activeQr.description}
                 </p>
               </div>
-            </div>
-
-            <div className="flex items-center gap-2 text-xs text-slate-400">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span>Verified Candidate • CGPA 8.96 • SIMATS CSE</span>
             </div>
           </div>
 
