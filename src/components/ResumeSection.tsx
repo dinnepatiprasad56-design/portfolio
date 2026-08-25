@@ -23,8 +23,6 @@ import { QRCodeSVG } from "./ui/QRCodeSVG";
 export const ResumeSection: React.FC = () => {
   const [showPdfEmbed, setShowPdfEmbed] = useState(false);
   const [selectedQrType, setSelectedQrType] = useState<"resume" | "github" | "live" | "linkedin">("resume");
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const pdfUrl = `${basePath}/Placement_Resume.pdf`;
 
   const qrTargets = {
     resume: {
