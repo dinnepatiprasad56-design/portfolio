@@ -21,7 +21,7 @@ import { QRCodeSVG } from "./ui/QRCodeSVG";
 
 export const ResumeSection: React.FC = () => {
   const [showPdfEmbed, setShowPdfEmbed] = useState(false);
-  const [selectedQrType, setSelectedQrType] = useState<"github" | "live" | "repo" | "linkedin">("github");
+  const [selectedQrType, setSelectedQrType] = useState<"github" | "live" | "repo" | "linkedin" | "drive">("github");
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const pdfUrl = `${basePath}/Placement_Resume.pdf`;
 
@@ -49,6 +49,12 @@ export const ResumeSection: React.FC = () => {
       url: PORTFOLIO_DATA.personal.socialLinks.linkedin,
       displayUrl: "linkedin.com/in/siddhu1234567890",
       description: "Scan to connect directly on LinkedIn professional network.",
+    },
+    drive: {
+      label: "Google Drive",
+      url: PORTFOLIO_DATA.personal.socialLinks.resumeDrive,
+      displayUrl: "drive.google.com/file/d/16voYeC3...",
+      description: "Scan or open directly on Google Drive for instant cloud access to verified placement resume.",
     },
   };
 
@@ -126,6 +132,16 @@ export const ResumeSection: React.FC = () => {
                 <Eye className="w-4 h-4 text-cyan-400" />
                 <span>{showPdfEmbed ? "Hide Live PDF" : "Preview PDF"}</span>
               </button>
+
+              <a
+                href={PORTFOLIO_DATA.personal.socialLinks.resumeDrive}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 transition-all flex items-center gap-1.5 group"
+              >
+                <ExternalLink className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform" />
+                <span>Google Drive</span>
+              </a>
 
               <a
                 href={pdfUrl}
