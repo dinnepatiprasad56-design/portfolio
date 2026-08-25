@@ -111,7 +111,9 @@ export const PORTFOLIO_DATA = {
       linkedin: "https://linkedin.com/in/siddhu1234567890",
       leetcode: "https://leetcode.com/u/D_Sidhu_prasad/",
       email: "mailto:dinnipatiprasad@gmail.com",
-      resumeDrive: "https://drive.google.com/file/d/16voYeC3-XknxWEIf0luRUjlw9ennVrn9/view?usp=sharing",
+      resumeUrl: "https://drive.google.com/file/d/16voYeC3-XknxWEIf0luRUjlw9ennVrn9/view?usp=sharing",
+      resumeDownloadUrl: "https://drive.google.com/uc?export=download&id=16voYeC3-XknxWEIf0luRUjlw9ennVrn9",
+      resumePreviewUrl: "https://drive.google.com/file/d/16voYeC3-XknxWEIf0luRUjlw9ennVrn9/preview",
     },
     quickStats: [
       { label: "Academic Standout", value: "8.96 CGPA", detail: "SIMATS Engineering" },

@@ -15,17 +15,24 @@ import {
   CheckCircle2,
   FolderGit2,
   Award,
+  Globe,
 } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
 import { QRCodeSVG } from "./ui/QRCodeSVG";
 
 export const ResumeSection: React.FC = () => {
   const [showPdfEmbed, setShowPdfEmbed] = useState(false);
-  const [selectedQrType, setSelectedQrType] = useState<"github" | "live" | "repo" | "linkedin" | "drive">("github");
+  const [selectedQrType, setSelectedQrType] = useState<"resume" | "github" | "live" | "linkedin">("resume");
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const pdfUrl = `${basePath}/Placement_Resume.pdf`;
 
   const qrTargets = {
+    resume: {
+      label: "Official Resume",
+      url: PORTFOLIO_DATA.personal.socialLinks.resumeUrl,
+      displayUrl: "drive.google.com/file/d/16voYeC3...",
+      description: "Direct camera scan to access and download the official placement resume on Google Drive.",
+    },
     github: {
       label: "GitHub Profile",
       url: PORTFOLIO_DATA.personal.socialLinks.github,
@@ -38,23 +45,11 @@ export const ResumeSection: React.FC = () => {
       displayUrl: "dinnepatiprasad56-design.github.io/portfolio",
       description: "Scan with mobile camera to open this live interactive portfolio web application instantly.",
     },
-    repo: {
-      label: "GitHub Repo",
-      url: PORTFOLIO_DATA.personal.socialLinks.githubRepo,
-      displayUrl: "github.com/dinnepatiprasad56-design/portfolio",
-      description: "Scan to inspect the complete Next.js portfolio repository and GitHub Actions workflows.",
-    },
     linkedin: {
       label: "LinkedIn",
       url: PORTFOLIO_DATA.personal.socialLinks.linkedin,
       displayUrl: "linkedin.com/in/siddhu1234567890",
       description: "Scan to connect directly on LinkedIn professional network.",
-    },
-    drive: {
-      label: "Google Drive",
-      url: PORTFOLIO_DATA.personal.socialLinks.resumeDrive,
-      displayUrl: "drive.google.com/file/d/16voYeC3...",
-      description: "Scan or open directly on Google Drive for instant cloud access to verified placement resume.",
     },
   };
 
@@ -134,17 +129,7 @@ export const ResumeSection: React.FC = () => {
               </button>
 
               <a
-                href={PORTFOLIO_DATA.personal.socialLinks.resumeDrive}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 transition-all flex items-center gap-1.5 group"
-              >
-                <ExternalLink className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform" />
-                <span>Google Drive</span>
-              </a>
-
-              <a
-                href={pdfUrl}
+                href={PORTFOLIO_DATA.personal.socialLinks.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 transition-all flex items-center gap-1.5"
@@ -154,12 +139,13 @@ export const ResumeSection: React.FC = () => {
               </a>
 
               <a
-                href={pdfUrl}
-                download="DINNEPATI_SINDHU_PRASAD_Resume.pdf"
+                href={PORTFOLIO_DATA.personal.socialLinks.resumeDownloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 text-white font-bold text-xs shadow-lg shadow-cyan-500/25 hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
               >
                 <Download className="w-4 h-4" />
-                <span>Download PDF</span>
+                <span>Download Resume</span>
               </a>
             </div>
           </div>
@@ -173,9 +159,9 @@ export const ResumeSection: React.FC = () => {
               className="rounded-2xl overflow-hidden border border-cyan-500/30 bg-slate-950 p-2"
             >
               <div className="flex items-center justify-between px-3 py-2 text-xs text-slate-400 border-b border-slate-800 mb-2">
-                <span className="font-mono text-cyan-400">📄 Placement_Resume.pdf Preview</span>
+                <span className="font-mono text-cyan-400">📄 Placement_Resume.pdf Live Preview</span>
                 <a
-                  href={pdfUrl}
+                  href={PORTFOLIO_DATA.personal.socialLinks.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white flex items-center gap-1 text-cyan-400"
@@ -184,9 +170,10 @@ export const ResumeSection: React.FC = () => {
                 </a>
               </div>
               <iframe
-                src={`${pdfUrl}#toolbar=0`}
+                src={PORTFOLIO_DATA.personal.socialLinks.resumePreviewUrl}
                 className="w-full h-[650px] rounded-xl border border-slate-800 bg-slate-900"
                 title="Placement Resume PDF Preview"
+                allow="autoplay"
               />
             </motion.div>
           )}
@@ -357,7 +344,10 @@ export const ResumeSection: React.FC = () => {
               <div className="space-y-1.5 flex-1">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Github className="w-4 h-4 text-cyan-400" />
+                    {selectedQrType === "resume" && <FileText className="w-4 h-4 text-cyan-400" />}
+                    {selectedQrType === "github" && <Github className="w-4 h-4 text-cyan-400" />}
+                    {selectedQrType === "live" && <Globe className="w-4 h-4 text-cyan-400" />}
+                    {selectedQrType === "linkedin" && <Linkedin className="w-4 h-4 text-cyan-400" />}
                     <span className="text-sm font-bold text-white">{activeQr.label} QR Code</span>
                   </div>
                   <a
