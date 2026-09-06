@@ -5,6 +5,8 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import { Sparkles, Brain, Award, ShieldCheck, Mail, Github, Linkedin, Phone } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
+import profilePhoto from "../../../public/images/profile.jpg";
+import { getAssetPath } from "@/utils/paths";
 
 interface ProfileMotionCardProps {
   className?: string;
@@ -108,18 +110,20 @@ export const ProfileMotionCard: React.FC<ProfileMotionCardProps> = ({
         <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl bg-slate-950 group/photo">
           
           {/* Main Portrait Photo */}
-          <div className="relative w-full h-[360px] sm:h-[420px] overflow-hidden">
+          <div className="relative w-full h-[360px] sm:h-[420px] overflow-hidden bg-slate-950">
             <Image
-              src="/images/profile.jpg"
+              src={profilePhoto}
               alt="Dinnepati Sindhu Prasad - Software Engineer & AI Specialist"
               fill
               quality={95}
               priority
-              className="object-cover object-center group-hover/photo:scale-105 transition-transform duration-700 ease-out"
+              placeholder="blur"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+              className="object-cover object-[center_18%] group-hover/photo:scale-105 transition-transform duration-700 ease-out"
             />
 
             {/* Futuristic Tech Grid & Shimmer Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-85" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60 pointer-events-none" />
             
             {/* Animated Laser Scanning Line */}
             <motion.div

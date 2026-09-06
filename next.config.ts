@@ -22,7 +22,7 @@ const basePath = getBasePath();
 const nextConfig: NextConfig = {
   output: "export",
   basePath: basePath || undefined,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+  assetPrefix: basePath || undefined,
   trailingSlash: true,
   reactStrictMode: true,
   images: {

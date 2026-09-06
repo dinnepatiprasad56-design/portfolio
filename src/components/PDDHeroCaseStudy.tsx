@@ -26,6 +26,7 @@ import {
   ChevronRight,
   Award,
 } from "lucide-react";
+import { getAssetPath } from "@/utils/paths";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
 import Image from "next/image";
 
@@ -211,7 +212,7 @@ export const PDDHeroCaseStudy: React.FC = () => {
                   <div className="lg:col-span-5 relative group">
                     <div className="relative rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl">
                       <Image
-                        src="/images/pdd/pdd_results.png"
+                        src={getAssetPath("/images/pdd/pdd_results.png")}
                         alt="PDD 3D Nerve Segmentation Result"
                         width={600}
                         height={400}
@@ -224,7 +225,7 @@ export const PDDHeroCaseStudy: React.FC = () => {
                           <div className="text-[10px] text-cyan-400 font-mono">Dice Score: 0.89 • Latency: 2.05s</div>
                         </div>
                         <button
-                          onClick={() => setSelectedImage("/images/pdd/pdd_results.png")}
+                          onClick={() => setSelectedImage(getAssetPath("/images/pdd/pdd_results.png"))}
                           className="p-2 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/40 transition-colors"
                         >
                           <Maximize2 className="w-4 h-4" />
