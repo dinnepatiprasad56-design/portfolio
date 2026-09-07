@@ -358,14 +358,14 @@ export const PORTFOLIO_DATA = {
       id: "ai-fire-detection",
       title: "AI-Based Real-Time Fire Detection System",
       category: "AI / ML" as const,
-      tagline: "Autonomous Computer Vision & Emergency Notification Platform",
-      description: "Production-grade computer vision system engineered with custom-trained YOLOv8 and OpenCV for real-time fire and smoke hazard detection (<30ms latency). Features browser camera streaming, video/image upload analysis, automated instant Telegram Bot & Gmail SMTP emergency notifications, intelligent cooldown timers, and a glassmorphic React + Vite telemetry dashboard backed by Flask & SQLite.",
+      tagline: "FireGuard AI • Computer Vision Emergency Alert Platform",
+      description: "Production-grade computer vision system engineered with custom-trained YOLOv8 and OpenCV for real-time fire and smoke hazard detection (<30ms latency). Features browser camera streaming, video/image upload analysis, automated instant Telegram Bot (@fire_guard_alert_bot) & Gmail SMTP emergency notifications, intelligent cooldown timers, and a glassmorphic React + Vite telemetry dashboard backed by Flask & SQLite.",
       technologies: ["Python", "YOLOv8", "OpenCV", "Flask", "React", "Vite", "Tailwind CSS", "Telegram Bot API", "SQLite"],
       githubUrl: "https://github.com/prasad1271/AI-Based-Real-Time-Fire-Detection-System/tree/main/fire-detection-system",
       image: "/images/projects/fire_detection.png",
       metrics: [
         { label: "Detection Speed", value: "30+ FPS" },
-        { label: "Accuracy", value: "96.5%" },
+        { label: "Accuracy", value: "81.9%" },
       ],
     },
     {

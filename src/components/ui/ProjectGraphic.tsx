@@ -66,13 +66,27 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
           <div className="absolute inset-0 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px] opacity-10" />
           <svg className="w-full h-full max-h-[180px]" viewBox="0 0 360 200" fill="none">
             <rect x="30" y="20" width="300" height="160" rx="12" fill="#0f172a" stroke="#1e293b" strokeWidth="2" />
+            {/* Camera feed header */}
+            <circle cx="48" cy="36" r="3" fill="#22c55e" />
+            <text x="56" y="39" fill="#94a3b8" fontSize="8.5" fontWeight="600" fontFamily="Inter, sans-serif">CAMERA FEED</text>
+            <rect x="266" y="27" width="52" height="16" rx="4" fill="#1e293b" stroke="#334155" />
+            <text x="292" y="38" textAnchor="middle" fill="#38bdf8" fontSize="8" fontWeight="bold" fontFamily="monospace">YOLOv8</text>
+
             {/* YOLO Bounding Box */}
-            <rect x="120" y="45" width="120" height="110" rx="4" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" strokeWidth="2" strokeDasharray="4 2" />
-            <rect x="120" y="25" width="100" height="20" rx="4" fill="#f59e0b" />
-            <text x="126" y="39" fill="#09090b" fontSize="10" fontWeight="bold">FIRE 96.5%</text>
+            <rect x="120" y="50" width="120" height="102" rx="4" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" strokeWidth="2" strokeDasharray="4 2" />
+            <rect x="120" y="30" width="95" height="20" rx="4" fill="#f59e0b" />
+            <text x="126" y="44" fill="#09090b" fontSize="10" fontWeight="bold">FIRE 81.9%</text>
+
             {/* Flame Icon visual */}
-            <path d="M 180 60 C 180 60, 205 100, 205 120 C 205 135, 193 145, 180 145 C 167 145, 155 135, 155 120 C 155 100, 180 60, 180 60 Z" fill="url(#fireGradient)" />
-            <path d="M 180 90 C 180 90, 193 110, 193 122 C 193 130, 187 137, 180 137 C 173 137, 167 130, 167 122 C 167 110, 180 90, 180 90 Z" fill="#fef08a" />
+            <path d="M 180 65 C 180 65, 205 105, 205 125 C 205 140, 193 150, 180 150 C 167 150, 155 140, 155 125 C 155 105, 180 65, 180 65 Z" fill="url(#fireGradient)" />
+            <path d="M 180 95 C 180 95, 193 115, 193 127 C 193 135, 187 142, 180 142 C 173 142, 167 135, 167 127 C 167 115, 180 95, 180 95 Z" fill="#fef08a" />
+
+            {/* Status Footer */}
+            <rect x="42" y="156" width="76" height="16" rx="4" fill="rgba(239, 68, 68, 0.2)" stroke="rgba(239, 68, 68, 0.5)" />
+            <circle cx="50" cy="164" r="2.5" fill="#ef4444" />
+            <text x="56" y="167" fill="#f87171" fontSize="7" fontWeight="bold" fontFamily="monospace">FIRE DETECTED</text>
+            <text x="318" y="167" textAnchor="end" fill="#64748b" fontSize="8" fontFamily="monospace">30+ FPS • &lt;30ms</text>
+
             <defs>
               <linearGradient id="fireGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stopColor="#ef4444" />
