@@ -132,11 +132,15 @@ export const TimelineSection: React.FC = () => {
       title: "AI-Based Real-Time Fire Detection System",
       subtitle: "Computer Vision Telemetry Dashboard",
       date: "2025",
-      description: "Computer vision emergency alerting system with custom YOLOv8 model, live Flask stream, and SMS notifications.",
+      description: "Autonomous hazard detection system with custom YOLOv8 model, live browser webcam inference, and automated Telegram Bot & Gmail SMTP alerting.",
       badge: "30+ FPS",
-      highlights: ["Achieved 96.5% detection accuracy at 30+ FPS real-time processing."],
-      skills: ["YOLOv8", "OpenCV", "Python", "Flask", "Tailwind CSS"],
-      link: "https://github.com/prasad1271",
+      highlights: [
+        "Sub-30ms YOLOv8 real-time inference (30+ FPS) with 96.5% detection accuracy.",
+        "Instant multi-channel emergency alerting via Telegram Bot API and Gmail SMTP with snapshot logging.",
+        "Built reactive glassmorphic telemetry dashboard using React, Vite, Tailwind CSS, Flask, and SQLite.",
+      ],
+      skills: ["YOLOv8", "OpenCV", "Python", "Flask", "React", "Tailwind CSS", "Telegram API", "SQLite"],
+      link: "https://github.com/prasad1271/AI-Based-Real-Time-Fire-Detection-System/tree/main/fire-detection-system",
     },
 
     // Certifications
