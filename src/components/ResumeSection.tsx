@@ -224,8 +224,8 @@ export const ResumeSection: React.FC = () => {
                 </div>
                 <div className="text-[11px] text-cyan-400">Corizo EduTech Private Limited</div>
                 <div className="text-[11px] text-slate-400 leading-relaxed">
-                  • AWS Lex Chatbot: Intent-driven automated conversational workflows.<br />
-                  • AWS S3 & IAM: IAM-based access control & secure cloud storage.
+                  • AWS Lex V2 & Lambda: Serverless hotel booking chatbot with dynamic pricing.<br />
+                  • Amazon S3 Static Hosting: Web hosting with granular IAM & bucket policies.
                 </div>
               </div>
               <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1 hover:border-blue-500/30 transition-all">

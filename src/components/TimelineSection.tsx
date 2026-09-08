@@ -89,10 +89,10 @@ export const TimelineSection: React.FC = () => {
       description: "Engineered scalable cloud services and automated conversational interfaces on AWS cloud infrastructure.",
       badge: "Cloud Internship",
       highlights: [
-        "AWS Lex Chatbot (Major Project): Developed conversational bot for automated user intent workflow resolution.",
-        "AWS S3 Cloud Storage & IAM (Minor Project): Configured secure multi-tier S3 storage with granular IAM policies.",
+        "AWS Lex V2 Chatbot (Major Project): Engineered serverless hotel booking assistant with Python 3.11 Lambda fulfillment and dynamic pricing.",
+        "Amazon S3 Static Hosting (Minor Project): Configured serverless web hosting with custom bucket policies, 11 9's durability, and CloudFront OAC analysis.",
       ],
-      skills: ["AWS Lex", "AWS S3", "IAM Security", "Cloud Architecture", "Python"],
+      skills: ["Amazon Lex V2", "AWS Lambda", "Amazon S3", "Python 3.11", "IAM Policies", "CloudWatch"],
     },
     {
       id: "intern-corizo-ai",

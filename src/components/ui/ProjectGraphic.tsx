@@ -124,8 +124,8 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
             <path d="M 110 110 C 100 110 90 100 90 90 C 90 80 100 70 110 70 C 115 60 130 50 145 55 C 155 45 175 45 185 55 C 195 50 210 60 210 70 C 220 70 230 80 230 90 C 230 100 220 110 210 110 Z" fill="rgba(6, 182, 212, 0.2)" stroke="#06b6d4" strokeWidth="2" />
             {/* Chatbot Bubble */}
             <rect x="200" y="110" width="110" height="45" rx="10" fill="#1e293b" stroke="#38bdf8" strokeWidth="1.5" />
-            <text x="212" y="130" fill="#38bdf8" fontSize="10" fontWeight="bold">AWS Lex Bot</text>
-            <text x="212" y="144" fill="#94a3b8" fontSize="9">IAM Secure S3</text>
+            <text x="210" y="130" fill="#38bdf8" fontSize="10" fontWeight="bold">AWS Lex V2</text>
+            <text x="210" y="144" fill="#94a3b8" fontSize="9">Lambda + S3</text>
           </svg>
         </div>
       );
