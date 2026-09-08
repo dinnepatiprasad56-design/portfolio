@@ -13,6 +13,7 @@ import {
   ExternalLink,
   ChevronRight,
   Filter,
+  Linkedin,
 } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
 
@@ -154,6 +155,7 @@ export const TimelineSection: React.FC = () => {
       badge: "Oracle Certified",
       highlights: ["Relational Databases, SQL Queries, Data Modeling, Query Optimization."],
       skills: ["SQL", "Relational Databases", "Data Modeling"],
+      link: "https://www.linkedin.com/posts/siddhu1234567890_oracle-database-sql-specialist-share-7269940623363731457-DTgC/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEw4Ro4BP2K8PxYwC449x43atuoZMcP-xV8",
     },
     {
       id: "cert-oracle-java",
@@ -165,6 +167,7 @@ export const TimelineSection: React.FC = () => {
       badge: "Oracle Academy",
       highlights: ["Java OOP, Data Structures, Exception Handling, JVM."],
       skills: ["Java", "OOP", "JVM Memory"],
+      link: "https://www.linkedin.com/posts/siddhu1234567890_badge-learning-growth-share-7277950083554287616-iqw6/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEw4Ro4BP2K8PxYwC449x43atuoZMcP-xV8",
     },
     {
       id: "cert-cisco",
@@ -176,6 +179,7 @@ export const TimelineSection: React.FC = () => {
       badge: "Cisco Verified",
       highlights: ["Network Security, Threat Assessment, Cryptography, Protocols."],
       skills: ["Cybersecurity", "Network Security", "Cryptography"],
+      link: "https://www.linkedin.com/posts/siddhu1234567890_introduction-to-cybersecurity-was-issued-share-7382087277092470784--Pxv/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEw4Ro4BP2K8PxYwC449x43atuoZMcP-xV8",
     },
     {
       id: "cert-forage",
@@ -187,6 +191,7 @@ export const TimelineSection: React.FC = () => {
       badge: "Tata Forage",
       highlights: ["Vulnerability Assessment, Identity Access Management, Incident Response."],
       skills: ["Security Operations", "Vulnerability Management"],
+      link: "https://www.linkedin.com/posts/siddhu1234567890_forage-certificate-ugcPost-7275048984631480320-Mfm7/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEw4Ro4BP2K8PxYwC449x43atuoZMcP-xV8",
     },
     {
       id: "cert-hackerrank",
@@ -198,6 +203,7 @@ export const TimelineSection: React.FC = () => {
       badge: "HackerRank",
       highlights: ["Java Syntax, Control Structures, Object-Oriented Logic."],
       skills: ["Java", "Algorithms"],
+      link: "https://www.linkedin.com/posts/siddhu1234567890_java-programming-hackerrank-share-7439233050015657984-oSVB/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEw4Ro4BP2K8PxYwC449x43atuoZMcP-xV8",
     },
     {
       id: "cert-corizo",
@@ -209,6 +215,7 @@ export const TimelineSection: React.FC = () => {
       badge: "Corizo Certified",
       highlights: ["Machine Learning, AWS Cloud Services, AWS Lex, Flask Pipelines."],
       skills: ["AWS Lex", "AWS S3", "Machine Learning", "Flask"],
+      link: "https://www.linkedin.com/posts/siddhu1234567890_artificialintelligence-training-iitbombay-activity-7378670930656493568-Janv?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEw4Ro4BP2K8PxYwC449x43atuoZMcP-xV8",
     },
   ];
 
@@ -385,6 +392,22 @@ export const TimelineSection: React.FC = () => {
                             </span>
                           ))}
                         </div>
+
+                        {/* Action Link Footer */}
+                        {m.link && (
+                          <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <a
+                              href={m.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group/link"
+                            >
+                              <Linkedin className="w-3.5 h-3.5 text-[#0A66C2] group-hover/link:scale-110 transition-transform" />
+                              <span>View LinkedIn Post</span>
+                              <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                            </a>
+                          </div>
+                        )}
 
                       </div>
                     </div>

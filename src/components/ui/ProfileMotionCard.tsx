@@ -167,21 +167,23 @@ export const ProfileMotionCard: React.FC<ProfileMotionCardProps> = ({
           <div className="relative z-10 pt-6 space-y-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <a
-                href={`mailto:${PORTFOLIO_DATA.personal.email}`}
+                href={PORTFOLIO_DATA.personal.socialLinks.gmail || `mailto:${PORTFOLIO_DATA.personal.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs shadow-lg shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
               >
                 <Mail className="w-4 h-4" />
-                <span>Send Direct Email</span>
+                <span>Send Email (Gmail)</span>
               </a>
 
               <a
-                href="https://wa.me/917285931308"
+                href={PORTFOLIO_DATA.personal.socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white font-bold text-xs border border-slate-700 hover:border-cyan-500/40 transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>Call / WhatsApp (+91 7285931308)</span>
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
 
