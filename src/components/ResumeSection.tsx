@@ -235,7 +235,7 @@ export const ResumeSection: React.FC = () => {
                 </div>
                 <div className="text-[11px] text-cyan-400">Corizo EduTech Private Limited</div>
                 <div className="text-[11px] text-slate-400 leading-relaxed">
-                  • Cardiac Attack Prediction: Supervised ML classification model.<br />
+                  • Cardiac Attack Prediction: Full-stack ML classification with FastAPI & React (0.959 ROC-AUC).<br />
                   • Spotify Data Analytics: Python audio trends & behavioral insights.
                 </div>
               </div>

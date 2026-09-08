@@ -104,10 +104,10 @@ export const TimelineSection: React.FC = () => {
       description: "Developed machine learning classification pipelines for predictive healthcare assessment and audio data mining.",
       badge: "AI Internship",
       highlights: [
-        "Cardiac Attack Prediction (Major Project): Built ML classification models achieving 94.2% accuracy.",
+        "Cardiac Attack Prediction (Major Project): Engineered triple-model ML inference (FastAPI + React 19) achieving 0.959 ROC-AUC and 92.9% sensitivity.",
         "Spotify Analytics (Minor Project): Visualized audio feature correlations on 100k+ track dataset.",
       ],
-      skills: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "Matplotlib", "Seaborn"],
+      skills: ["Python", "FastAPI", "React 19", "Scikit-Learn", "XGBoost", "Docker"],
     },
 
     // Projects

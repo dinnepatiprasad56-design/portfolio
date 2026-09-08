@@ -107,9 +107,9 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
             <path d="M 40 100 L 100 100 L 115 60 L 130 145 L 145 30 L 160 120 L 175 90 L 190 100 L 320 100" stroke="#f43f5e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             <circle cx="145" cy="30" r="5" fill="#f43f5e" />
             <text x="210" y="60" fill="#f8fafc" fontSize="12" fontWeight="700">Risk Matrix</text>
-            <text x="210" y="80" fill="#94a3b8" fontSize="10">Accuracy: 94.2%</text>
+            <text x="210" y="80" fill="#94a3b8" fontSize="10">ROC-AUC: 0.959</text>
             <rect x="210" y="95" width="90" height="24" rx="6" fill="rgba(244, 63, 94, 0.2)" stroke="#f43f5e" />
-            <text x="220" y="111" fill="#f43f5e" fontSize="10" fontWeight="bold">ML Classifier</text>
+            <text x="218" y="111" fill="#f43f5e" fontSize="10" fontWeight="bold">Triple Model ML</text>
           </svg>
         </div>
       );
