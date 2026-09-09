@@ -203,8 +203,8 @@ export const PORTFOLIO_DATA = {
     description:
       "A production-ready research-level medical image processing platform featuring a Kotlin Android client with Firebase authentication, a FastAPI microservice with PyTorch U-Net neural network segmentation, deterministic SHA-256 data lineage reporting, and serverless Cloud Run containerization.",
     technologies: ["Android (Kotlin)", "Jetpack Compose", "FastAPI", "PyTorch U-Net", "Firebase Auth", "Firestore Realtime", "Docker", "GCP Cloud Run", "NiBabel"],
-    githubUrl: "https://github.com/prasad1271",
-    liveUrl: "https://github.com/prasad1271",
+    githubUrl: "https://github.com/dinnepatiprasad56-design/IAN_DETECTION_STUDIO",
+    liveUrl: "https://github.com/dinnepatiprasad56-design/IAN_DETECTION_STUDIO",
     image: "/images/pdd/pdd_results.png",
     caseStudy: {
       title: "PDD: Research-Grade Medical File Processor & 3D Segmentation Platform",

@@ -126,7 +126,7 @@ export const TimelineSection: React.FC = () => {
         "FirebaseAuthInterceptor JWT token injection & realtime Firestore sync.",
       ],
       skills: ["Kotlin", "FastAPI", "PyTorch", "MONAI", "Cloud Run", "Firebase Auth"],
-      link: "https://github.com/prasad1271",
+      link: "https://github.com/dinnepatiprasad56-design/IAN_DETECTION_STUDIO",
     },
     {
       id: "proj-fire",
