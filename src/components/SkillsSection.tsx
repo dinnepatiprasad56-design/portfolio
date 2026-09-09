@@ -131,36 +131,57 @@ export const SkillsSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Skills List */}
-                  <div className="space-y-4">
-                    {group.skills.map((skill) => (
-                      <div key={skill.name} className="space-y-1.5">
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="font-semibold text-slate-200 flex items-center gap-1.5">
-                            {skill.highlighted && (
-                              <Sparkles className="w-3 h-3 text-cyan-400" />
-                            )}
-                            {skill.name}
-                          </span>
-                          <span className="font-mono text-slate-400">{skill.level}%</span>
-                        </div>
+                  {/* Skills List - Interactive Technology Data-Flow */}
+                  <div className="space-y-3 sm:space-y-3.5">
+                    {group.skills.map((skill, skillIdx) => {
+                      const duration = (3.2 + ((groupIdx * 3 + skillIdx) % 4) * 0.35).toFixed(2);
+                      const delay = (((groupIdx * 0.4 + skillIdx * 0.65)) % 2.5).toFixed(2);
 
-                        {/* Progress Bar */}
-                        <div className="w-full h-2 rounded-full bg-slate-900 overflow-hidden border border-white/5">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className={`h-full rounded-full ${
-                              skill.highlighted
-                                ? "bg-gradient-to-r from-blue-500 to-cyan-400 shadow-sm shadow-cyan-400/50"
-                                : "bg-slate-600"
-                            }`}
-                          />
+                      return (
+                        <div
+                          key={skill.name}
+                          className="group flex items-center justify-between gap-3 sm:gap-4 py-1 transition-colors cursor-default"
+                        >
+                          {/* Technology Name & Leading Indicator */}
+                          <div className="flex items-center gap-2 min-w-[130px] sm:min-w-[165px] shrink-0">
+                            {skill.highlighted ? (
+                              <Sparkles className="w-3.5 h-3.5 text-cyan-400 shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:text-cyan-300" />
+                            ) : (
+                              <span className="w-1.5 h-1.5 rounded-full bg-slate-700 transition-colors duration-300 group-hover:bg-cyan-400/70 shrink-0" />
+                            )}
+                            <span className="text-xs sm:text-sm font-medium text-slate-300 transition-colors duration-300 group-hover:text-white">
+                              {skill.name}
+                            </span>
+                          </div>
+
+                          {/* Decorative Technology Motion Line */}
+                          <div className="relative flex-1 flex items-center h-4 min-w-[60px]">
+                            {/* Base Track */}
+                            <div className="tech-signal-line">
+                              {/* Traveling Soft Cyan Scanning Shimmer */}
+                              <div
+                                className="tech-signal-shimmer"
+                                style={{
+                                  animationDelay: `${delay}s`,
+                                  animationDuration: `${duration}s`,
+                                }}
+                              />
+                            </div>
+
+                            {/* Moving Cyan Glowing Particle */}
+                            <div
+                              className="tech-signal-particle"
+                              style={{
+                                animationDelay: `${delay}s`,
+                                animationDuration: `${duration}s`,
+                              }}
+                            >
+                              <span className="tech-signal-dot" />
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
 

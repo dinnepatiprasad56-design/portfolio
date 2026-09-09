@@ -14,6 +14,7 @@ import {
   ChevronRight,
   Filter,
   Linkedin,
+  Github,
 } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
 
@@ -106,7 +107,7 @@ export const TimelineSection: React.FC = () => {
       badge: "AI Internship",
       highlights: [
         "Cardiac Attack Prediction (Major Project): Engineered triple-model ML inference (FastAPI + React 19) achieving 0.959 ROC-AUC and 92.9% sensitivity.",
-        "Spotify Analytics (Minor Project): Visualized audio feature correlations on 100k+ track dataset.",
+        "Spotify Listening Intelligence (Minor Project): Analyzed 114k+ tracks with Russell Mood Model, hypothesis tests, and Streamlit dashboard.",
       ],
       skills: ["Python", "FastAPI", "React 19", "Scikit-Learn", "XGBoost", "Docker"],
     },
@@ -142,6 +143,38 @@ export const TimelineSection: React.FC = () => {
       ],
       skills: ["YOLOv8", "OpenCV", "Python", "Flask", "React", "Tailwind CSS", "Telegram API", "SQLite"],
       link: "https://github.com/prasad1271/AI-Based-Real-Time-Fire-Detection-System/tree/main/fire-detection-system",
+    },
+    {
+      id: "proj-sentiment",
+      category: "Projects",
+      title: "NLP Sentiment Analysis Web Application",
+      subtitle: "End-to-End NLP Sentiment Classification & Opinion Mining",
+      date: "2025",
+      description: "Production-ready natural language processing platform that classifies text into Positive, Neutral, and Negative sentiments with 97.78% accuracy.",
+      badge: "97.78% Accuracy",
+      highlights: [
+        "97.78% test accuracy & 97.78% Macro F1 with Laplace-smoothed Multinomial Naive Bayes.",
+        "Negation-preserving preprocessing & sublinear TF-IDF unigrams/bigrams.",
+        "Interactive dark dashboard with SVG confidence gauges and Flask REST API.",
+      ],
+      skills: ["Python 3.11", "Flask", "Scikit-Learn", "NLTK", "TF-IDF", "Naive Bayes", "Pytest"],
+      link: "https://github.com/prasad1271/NLP-Sentiment-Analysis-Web-Application",
+    },
+    {
+      id: "proj-spotify",
+      category: "Projects",
+      title: "Spotify Listening Intelligence & Data Visualization",
+      subtitle: "Big Data Music Intelligence & Interactive Streamlit Analytics",
+      date: "2025 – 2026",
+      description: "End-to-end music listening intelligence platform analyzing 114,000+ Spotify tracks across 114 musical genres and 31,000+ artists.",
+      badge: "114k+ Tracks",
+      highlights: [
+        "Forensic data cleaning on 114,000+ tracks with Russell 2D Circumplex Mood Model.",
+        "Statistical hypothesis tests (Welch's t-test t=15.26, Kruskal-Wallis H=769.15).",
+        "Interactive dark-themed Streamlit dashboard with 16 dual-engine visualizations.",
+      ],
+      skills: ["Python 3.11", "Streamlit", "Plotly", "Pandas", "Scikit-Learn", "Matplotlib", "Seaborn"],
+      link: "https://github.com/prasad1271/Spotify-Listening-Intelligence-Data-Visualization",
     },
 
     // Certifications
@@ -396,16 +429,29 @@ export const TimelineSection: React.FC = () => {
                         {/* Action Link Footer */}
                         {m.link && (
                           <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                            <a
-                              href={m.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group/link"
-                            >
-                              <Linkedin className="w-3.5 h-3.5 text-[#0A66C2] group-hover/link:scale-110 transition-transform" />
-                              <span>View LinkedIn Post</span>
-                              <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                            </a>
+                            {m.link.includes("github.com") ? (
+                              <a
+                                href={m.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group/link"
+                              >
+                                <Github className="w-3.5 h-3.5 text-slate-300 group-hover/link:text-white group-hover/link:scale-110 transition-transform" />
+                                <span>View GitHub Repository</span>
+                                <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                              </a>
+                            ) : (
+                              <a
+                                href={m.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group/link"
+                              >
+                                <Linkedin className="w-3.5 h-3.5 text-[#0A66C2] group-hover/link:scale-110 transition-transform" />
+                                <span>View LinkedIn Post</span>
+                                <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                              </a>
+                            )}
                           </div>
                         )}
 

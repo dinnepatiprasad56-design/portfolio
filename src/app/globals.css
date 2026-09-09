@@ -120,3 +120,119 @@
   background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* ==========================================================================
+   Futuristic Technology Signal & Data Flow Animations (Skills Section)
+   ========================================================================== */
+
+@keyframes techParticleFlow {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 0.9;
+  }
+  100% {
+    left: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
+@keyframes techShimmerScan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.tech-signal-line {
+  position: relative;
+  width: 100%;
+  height: 1.5px;
+  background-color: rgba(30, 41, 59, 0.8);
+  border-radius: 9999px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.group:hover .tech-signal-line {
+  background-color: rgba(51, 65, 85, 0.8);
+}
+
+.tech-signal-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(6, 182, 212, 0.45) 50%,
+    transparent 100%
+  );
+  border-radius: 9999px;
+  animation: techShimmerScan 3.6s ease-in-out infinite;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.group:hover .tech-signal-shimmer {
+  opacity: 0.95;
+}
+
+.tech-signal-particle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: techParticleFlow 3.6s ease-in-out infinite;
+  pointer-events: none;
+  will-change: left, opacity;
+}
+
+.tech-signal-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #22d3ee;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.8), 0 0 14px rgba(6, 182, 212, 0.4);
+  transition: all 0.3s ease;
+}
+
+.group:hover .tech-signal-dot {
+  background-color: #67e8f9;
+  transform: scale(1.25);
+  box-shadow: 0 0 12px rgba(103, 232, 249, 1), 0 0 18px rgba(34, 211, 238, 0.7);
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .tech-signal-shimmer,
+  .tech-signal-particle {
+    animation: none !important;
+  }
+  .tech-signal-shimmer {
+    opacity: 0.15 !important;
+    transform: none !important;
+  }
+  .tech-signal-particle {
+    left: 50% !important;
+    opacity: 0.6 !important;
+  }
+}
+

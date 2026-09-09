@@ -74,8 +74,8 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
 
             {/* YOLO Bounding Box */}
             <rect x="120" y="50" width="120" height="102" rx="4" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" strokeWidth="2" strokeDasharray="4 2" />
-            <rect x="120" y="30" width="95" height="20" rx="4" fill="#f59e0b" />
-            <text x="126" y="44" fill="#09090b" fontSize="10" fontWeight="bold">FIRE 81.9%</text>
+            <rect x="120" y="30" width="105" height="20" rx="4" fill="#f59e0b" />
+            <text x="126" y="44" fill="#09090b" fontSize="10" fontWeight="bold">HAZARD DETECTED</text>
 
             {/* Flame Icon visual */}
             <path d="M 180 65 C 180 65, 205 105, 205 125 C 205 140, 193 150, 180 150 C 167 150, 155 140, 155 125 C 155 105, 180 65, 180 65 Z" fill="url(#fireGradient)" />
@@ -85,7 +85,7 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
             <rect x="42" y="156" width="76" height="16" rx="4" fill="rgba(239, 68, 68, 0.2)" stroke="rgba(239, 68, 68, 0.5)" />
             <circle cx="50" cy="164" r="2.5" fill="#ef4444" />
             <text x="56" y="167" fill="#f87171" fontSize="7" fontWeight="bold" fontFamily="monospace">FIRE DETECTED</text>
-            <text x="318" y="167" textAnchor="end" fill="#64748b" fontSize="8" fontFamily="monospace">30+ FPS • &lt;30ms</text>
+            <text x="318" y="167" textAnchor="end" fill="#64748b" fontSize="8" fontFamily="monospace">LIVE WEBCAM • OPENCV</text>
 
             <defs>
               <linearGradient id="fireGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -107,7 +107,7 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
             <path d="M 40 100 L 100 100 L 115 60 L 130 145 L 145 30 L 160 120 L 175 90 L 190 100 L 320 100" stroke="#f43f5e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             <circle cx="145" cy="30" r="5" fill="#f43f5e" />
             <text x="210" y="60" fill="#f8fafc" fontSize="12" fontWeight="700">Risk Matrix</text>
-            <text x="210" y="80" fill="#94a3b8" fontSize="10">ROC-AUC: 0.959</text>
+            <text x="210" y="80" fill="#94a3b8" fontSize="10">FastAPI + React 19</text>
             <rect x="210" y="95" width="90" height="24" rx="6" fill="rgba(244, 63, 94, 0.2)" stroke="#f43f5e" />
             <text x="218" y="111" fill="#f43f5e" fontSize="10" fontWeight="bold">Triple Model ML</text>
           </svg>
@@ -153,11 +153,102 @@ export const ProjectGraphic: React.FC<ProjectGraphicProps> = ({ id, className = 
           <div className="absolute inset-0 bg-[radial-gradient(#6366f1_1px,transparent_1px)] [background-size:20px_20px] opacity-10" />
           <svg className="w-full h-full max-h-[180px]" viewBox="0 0 360 200" fill="none">
             <rect x="30" y="20" width="300" height="160" rx="12" fill="#0f172a" stroke="#1e293b" strokeWidth="2" />
-            {/* Sentiment Meter */}
-            <path d="M 90 140 A 70 70 0 0 1 270 140" fill="none" stroke="#334155" strokeWidth="12" strokeLinecap="round" />
-            <path d="M 90 140 A 70 70 0 0 1 240 90" fill="none" stroke="#6366f1" strokeWidth="12" strokeLinecap="round" />
-            <polygon points="180,140 220,95 185,135" fill="#818cf8" />
-            <text x="180" y="170" textAnchor="middle" fill="#818cf8" fontSize="12" fontWeight="bold">POSITIVE (91.8%)</text>
+            
+            {/* Header badges */}
+            <circle cx="50" cy="38" r="3.5" fill="#6366f1" />
+            <text x="60" y="41" fill="#94a3b8" fontSize="8.5" fontWeight="600" fontFamily="Inter, sans-serif">NLP SENTIMENT ENGINE</text>
+            <rect x="236" y="30" width="82" height="16" rx="4" fill="#1e293b" stroke="#334155" />
+            <text x="277" y="41" textAnchor="middle" fill="#818cf8" fontSize="8" fontWeight="bold" fontFamily="monospace">NLTK + TF-IDF</text>
+
+            {/* Gauge Track & Needle */}
+            <path d="M 100 135 A 65 65 0 0 1 260 135" fill="none" stroke="#1e293b" strokeWidth="10" strokeLinecap="round" />
+            <path d="M 100 135 A 65 65 0 0 1 140 85" fill="none" stroke="#f43f5e" strokeWidth="10" strokeLinecap="round" opacity="0.7" />
+            <path d="M 145 80 A 65 65 0 0 1 215 80" fill="none" stroke="#64748b" strokeWidth="10" opacity="0.6" />
+            <path d="M 220 85 A 65 65 0 0 1 260 135" fill="none" stroke="#10b981" strokeWidth="10" strokeLinecap="round" />
+            
+            {/* Needle pointing to high positive */}
+            <polygon points="180,135 242,92 184,130" fill="#a5b4fc" />
+            <circle cx="180" cy="135" r="5" fill="#6366f1" stroke="#a5b4fc" strokeWidth="2" />
+
+            {/* Prediction Label */}
+            <text x="180" y="152" textAnchor="middle" fill="#34d399" fontSize="11" fontWeight="bold" fontFamily="monospace">PREDICTED: POSITIVE</text>
+
+            {/* 3-Class Mini Pills */}
+            <g transform="translate(68, 160)">
+              <rect width="66" height="14" rx="3" fill="rgba(16, 185, 129, 0.15)" stroke="rgba(16, 185, 129, 0.4)" />
+              <text x="33" y="10.5" textAnchor="middle" fill="#34d399" fontSize="7.5" fontWeight="bold" fontFamily="monospace">POSITIVE</text>
+            </g>
+            <g transform="translate(148, 160)">
+              <rect width="64" height="14" rx="3" fill="rgba(100, 116, 139, 0.15)" stroke="rgba(100, 116, 139, 0.3)" />
+              <text x="32" y="10.5" textAnchor="middle" fill="#94a3b8" fontSize="7.5" fontFamily="monospace">NEUTRAL</text>
+            </g>
+            <g transform="translate(226, 160)">
+              <rect width="64" height="14" rx="3" fill="rgba(244, 63, 94, 0.15)" stroke="rgba(244, 63, 94, 0.3)" />
+              <text x="32" y="10.5" textAnchor="middle" fill="#f87171" fontSize="7.5" fontFamily="monospace">NEGATIVE</text>
+            </g>
+          </svg>
+        </div>
+      );
+
+    case "spotify-data-analytics":
+      return (
+        <div className={`relative w-full h-full min-h-[220px] bg-slate-950 rounded-xl overflow-hidden flex items-center justify-center p-6 border border-emerald-500/20 ${className}`}>
+          <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:20px_20px] opacity-10" />
+          <svg className="w-full h-full max-h-[180px]" viewBox="0 0 360 200" fill="none">
+            <rect x="30" y="20" width="300" height="160" rx="12" fill="#0f172a" stroke="#1e293b" strokeWidth="2" />
+            
+            {/* Header */}
+            <circle cx="50" cy="38" r="3.5" fill="#10b981" />
+            <text x="60" y="41" fill="#94a3b8" fontSize="8.5" fontWeight="600" fontFamily="Inter, sans-serif">SPOTIFY INTELLIGENCE</text>
+            <rect x="236" y="30" width="82" height="16" rx="4" fill="#1e293b" stroke="#334155" />
+            <text x="277" y="41" textAnchor="middle" fill="#34d399" fontSize="8" fontWeight="bold" fontFamily="monospace">STREAMLIT APP</text>
+
+            {/* Left side: Animated-style Equalizer Waveform Bars */}
+            <g transform="translate(48, 62)">
+              <rect x="0" y="35" width="5" height="35" rx="2" fill="#10b981" opacity="0.6" />
+              <rect x="8" y="20" width="5" height="50" rx="2" fill="#34d399" />
+              <rect x="16" y="10" width="5" height="60" rx="2" fill="#10b981" />
+              <rect x="24" y="25" width="5" height="45" rx="2" fill="#34d399" />
+              <rect x="32" y="5" width="5" height="65" rx="2" fill="#6ee7b7" />
+              <rect x="40" y="18" width="5" height="52" rx="2" fill="#10b981" />
+              <rect x="48" y="30" width="5" height="40" rx="2" fill="#34d399" />
+              <rect x="56" y="12" width="5" height="58" rx="2" fill="#10b981" />
+              <rect x="64" y="40" width="5" height="30" rx="2" fill="#10b981" opacity="0.6" />
+              <text x="35" y="82" textAnchor="middle" fill="#64748b" fontSize="7" fontFamily="monospace">AUDIO SPECTRUM</text>
+            </g>
+
+            {/* Center Divider */}
+            <line x1="140" y1="58" x2="140" y2="145" stroke="#1e293b" strokeWidth="1" strokeDasharray="3 3" />
+
+            {/* Right side: Russell 2D Mood Circumplex Quadrant */}
+            <g transform="translate(160, 58)">
+              {/* Axes */}
+              <line x1="10" y1="44" x2="150" y2="44" stroke="#334155" strokeWidth="1.5" />
+              <line x1="80" y1="5" x2="80" y2="82" stroke="#334155" strokeWidth="1.5" />
+              
+              {/* Axis labels */}
+              <text x="150" y="47" fill="#64748b" fontSize="6.5" fontFamily="monospace">Valence</text>
+              <text x="80" y="3" textAnchor="middle" fill="#64748b" fontSize="6.5" fontFamily="monospace">Energy</text>
+
+              {/* Mood Quadrants */}
+              <text x="115" y="25" fill="#34d399" fontSize="7.5" fontWeight="bold" fontFamily="monospace">Exuberant</text>
+              <text x="45" y="25" fill="#f59e0b" fontSize="7.5" fontWeight="bold" fontFamily="monospace" textAnchor="end">Turbulent</text>
+              <text x="45" y="68" fill="#60a5fa" fontSize="7.5" fontWeight="bold" fontFamily="monospace" textAnchor="end">Melancholy</text>
+              <text x="115" y="68" fill="#a78bfa" fontSize="7.5" fontWeight="bold" fontFamily="monospace">Chill</text>
+
+              {/* Plotted tracks scatter dots */}
+              <circle cx="120" cy="32" r="3" fill="#34d399" opacity="0.8" />
+              <circle cx="100" cy="22" r="2.5" fill="#34d399" opacity="0.6" />
+              <circle cx="55" cy="30" r="3" fill="#f59e0b" opacity="0.8" />
+              <circle cx="60" cy="60" r="2.5" fill="#60a5fa" opacity="0.7" />
+              <circle cx="110" cy="58" r="3" fill="#a78bfa" opacity="0.8" />
+            </g>
+
+            {/* Footer metrics */}
+            <rect x="44" y="156" width="272" height="18" rx="4" fill="rgba(16, 185, 129, 0.08)" stroke="rgba(16, 185, 129, 0.2)" />
+            <text x="180" y="168" textAnchor="middle" fill="#34d399" fontSize="7.5" fontWeight="bold" fontFamily="monospace">
+              STREAMLIT • RUSSELL MOOD MODEL • 16 DUAL-ENGINE CHARTS
+            </text>
           </svg>
         </div>
       );

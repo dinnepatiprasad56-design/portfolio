@@ -236,7 +236,7 @@ export const ResumeSection: React.FC = () => {
                 <div className="text-[11px] text-cyan-400">Corizo EduTech Private Limited</div>
                 <div className="text-[11px] text-slate-400 leading-relaxed">
                   • Cardiac Attack Prediction: Full-stack ML classification with FastAPI & React (0.959 ROC-AUC).<br />
-                  • Spotify Data Analytics: Python audio trends & behavioral insights.
+                  • Spotify Listening Intelligence: Python audio intelligence & Streamlit dashboard (114k+ tracks).
                 </div>
               </div>
 
@@ -249,7 +249,7 @@ export const ResumeSection: React.FC = () => {
                 <div className="text-[11px] text-slate-300 leading-relaxed space-y-1">
                   <div><strong>1. IAN Detection Studio:</strong> 3D NIfTI medical segmentation platform (PyTorch + MONAI + FastAPI + Android).</div>
                   <div><strong>2. FireGuard AI (Fire Detection):</strong> Real-time YOLOv8 + OpenCV detection (81.9% peak confidence) with React & Flask telemetry dashboard.</div>
-                  <div><strong>3. Sentiment Analysis Web App:</strong> NLP text classification with NLTK + Flask.</div>
+                  <div><strong>3. Sentiment Analysis Web App:</strong> 97.78% accuracy NLP classifier with NLTK, TF-IDF & Flask.</div>
                 </div>
               </div>
             </div>

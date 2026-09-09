@@ -105,13 +105,13 @@ export const OtherProjectsSection: React.FC = () => {
                     {project.description}
                   </p>
 
-                  {/* Metrics Pills if available */}
+                  {/* Project Details Pills */}
                   {project.metrics && (
-                    <div className="flex items-center gap-3 pt-2">
+                    <div className="flex flex-wrap items-center gap-2 pt-2">
                       {project.metrics.map((m, idx) => (
                         <div key={idx} className="px-2.5 py-1 rounded-lg bg-slate-900 border border-white/5 text-[11px]">
                           <span className="text-slate-400 font-mono">{m.label}: </span>
-                          <span className="text-cyan-400 font-bold">{m.value}</span>
+                          <span className="text-cyan-400 font-medium">{m.value}</span>
                         </div>
                       ))}
                     </div>
