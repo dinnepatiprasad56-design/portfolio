@@ -102,7 +102,7 @@ export const ProfileMotionCard: React.FC<ProfileMotionCardProps> = ({
           </div>
 
           <div className="px-3 py-1 rounded-full text-[10px] font-bold font-mono bg-blue-500/10 text-blue-400 border border-blue-500/30">
-            B.E CSE • 8.96 CGPA
+            B.E CSE • 8.93 CGPA
           </div>
         </div>
 

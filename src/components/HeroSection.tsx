@@ -97,7 +97,7 @@ export const HeroSection: React.FC = () => {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
               </span>
               <span className="text-xs font-semibold tracking-wide uppercase">
-                B.E CSE • CGPA 8.96 • Open for Opportunities
+                B.E CSE • CGPA 8.93 • Open for Opportunities
               </span>
               <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
             </motion.div>

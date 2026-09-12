@@ -47,8 +47,8 @@ export const TimelineSection: React.FC = () => {
       subtitle: "SIMATS Engineering (Saveetha University)",
       date: "2023 – 2027",
       location: "Chennai, India",
-      description: "Academic standout maintaining an 8.96 / 10 CGPA distinction, specializing in Artificial Intelligence, Mobile Engineering, and Cloud Systems.",
-      badge: "8.96 CGPA",
+      description: "Academic standout maintaining an 8.93 / 10 CGPA distinction, specializing in Artificial Intelligence, Mobile Engineering, and Cloud Systems.",
+      badge: "8.93 CGPA",
       highlights: [
         "Specialized in AI & ML, Mobile Computing, Data Structures & Algorithms, and Cloud Infrastructure.",
         "Engineered PDD_APP: Flagship 3D Medical Neural Mesh Segmentation platform.",

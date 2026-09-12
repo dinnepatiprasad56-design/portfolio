@@ -111,7 +111,7 @@ export const ResumeSection: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-xs text-cyan-400 font-mono mt-1">
-                  B.E Computer Science & Engineering • CGPA 8.96 • SIMATS Saveetha University
+                  B.E Computer Science & Engineering • CGPA 8.93 • SIMATS Saveetha University
                 </p>
               </div>
             </div>
@@ -188,7 +188,7 @@ export const ResumeSection: React.FC = () => {
               <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2 hover:border-cyan-500/30 transition-all">
                 <div className="flex justify-between items-start text-xs">
                   <span className="font-bold text-white">Bachelor of Engineering (B.E) – CSE</span>
-                  <span className="font-mono text-cyan-400 font-bold">8.96 CGPA</span>
+                  <span className="font-mono text-cyan-400 font-bold">8.93 CGPA</span>
                 </div>
                 <div className="text-[11px] text-slate-300">SIMATS Engineering (Saveetha University)</div>
                 <div className="text-[10px] text-slate-500 font-mono">2023 - 2027 • Chennai, India</div>
@@ -325,7 +325,7 @@ export const ResumeSection: React.FC = () => {
 
               <div className="flex items-center gap-2 text-xs text-slate-400">
                 <Sparkles className="w-4 h-4 text-cyan-400" />
-                <span>Verified Candidate • CGPA 8.96 • SIMATS CSE</span>
+                <span>Verified Candidate • CGPA 8.93 • SIMATS CSE</span>
               </div>
             </div>
 

@@ -30,7 +30,7 @@ export const AboutSection: React.FC = () => {
     },
     {
       icon: Award,
-      title: "CGPA 8.96",
+      title: "CGPA 8.93",
       subtitle: "Top Tier Academic Record",
       description: "Consistent Excellence & Core CS Mastery",
       badge: "Distinction",
@@ -130,8 +130,8 @@ export const AboutSection: React.FC = () => {
                 {/* SVG Avatar Graphic */}
                 <div className="relative w-full h-80 rounded-2xl bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center p-6 border border-slate-800">
                   <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shadow-xl shadow-cyan-500/20 mb-4">
-                    <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                      DSP
+                    <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl sm:text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                      Dinnepati
                     </div>
                   </div>
 
@@ -139,7 +139,7 @@ export const AboutSection: React.FC = () => {
                     DINNEPATI SINDHU PRASAD
                   </h3>
                   <p className="text-xs text-cyan-400 font-mono mt-1">
-                    Software & AI Engineer
+                    Software & Cloud Engineer
                   </p>
 
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
@@ -147,7 +147,7 @@ export const AboutSection: React.FC = () => {
                       B.E CSE 2027
                     </span>
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                      CGPA 8.96
+                      CGPA 8.93
                     </span>
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                       Chennai, India

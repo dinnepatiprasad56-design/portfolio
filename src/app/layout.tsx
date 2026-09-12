@@ -32,16 +32,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://github.com/prasad1271",
-    title: "DINNEPATI SINDHU PRASAD | Software Engineer & AI Specialist",
+    title: "DINNEPATI SINDHU PRASAD | Software Engineer & Cloud Engineer",
     description:
-      "Building AI-powered Healthcare Applications and Scalable Software Solutions. CGPA 8.96 B.E CSE Student.",
+      "Cloud Engineering, Android Applications, and Scalable Software Solutions. CGPA 8.93 B.E CSE Student.",
     siteName: "Dinnepati Sindhu Prasad Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DINNEPATI SINDHU PRASAD | Software Engineer & AI Specialist",
+    title: "DINNEPATI SINDHU PRASAD | Software Engineer & Cloud Engineer",
     description:
-      "Building AI-powered Healthcare Applications and Scalable Software Solutions.",
+      "Cloud Engineering, Android Applications, and Scalable Software Solutions.",
   },
   robots: {
     index: true,

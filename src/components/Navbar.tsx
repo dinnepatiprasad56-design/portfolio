@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-base text-slate-100 tracking-tight leading-none group-hover:text-cyan-400 transition-colors">
-                DSP
+                Dinnepati
               </span>
               <span className="text-[10px] text-slate-400 tracking-wider font-mono">
                 SINDHU PRASAD
