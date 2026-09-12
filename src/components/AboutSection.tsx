@@ -130,8 +130,8 @@ export const AboutSection: React.FC = () => {
                 {/* SVG Avatar Graphic */}
                 <div className="relative w-full h-80 rounded-2xl bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center p-6 border border-slate-800">
                   <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shadow-xl shadow-cyan-500/20 mb-4">
-                    <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl sm:text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                      Dinnepati
+                    <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-lg sm:text-xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                      DINNEPATI
                     </div>
                   </div>
 
