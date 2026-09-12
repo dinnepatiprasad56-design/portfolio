@@ -142,7 +142,7 @@ export const PDDHeroCaseStudy: React.FC = () => {
             <div className="flex gap-2">
               {[
                 { id: "overview", label: "Clinical Problem & Solution" },
-                { id: "screenshots", label: "Real Screenshots (11)" },
+                { id: "screenshots", label: "Real Screenshots (10)" },
                 { id: "architecture", label: "System Architecture" },
                 { id: "pipeline", label: "PyTorch U-Net AI Pipeline" },
                 { id: "challenges", label: "Challenges & Lessons Learned" },

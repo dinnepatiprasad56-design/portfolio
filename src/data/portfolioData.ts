@@ -298,13 +298,6 @@ export const PORTFOLIO_DATA = {
           driveUrl: "https://drive.google.com/file/d/19eADJ0uVX4FEjvgvQ6DXvvg3K0Bh6Itt/view?usp=sharing",
           caption: "Role-based access control interface with biometric session authentication, JWT token expiry, and user credential management.",
         },
-        {
-          id: "architecture",
-          title: "End-to-End System Architecture",
-          category: "System Design",
-          image: "/images/pdd/pdd_architecture.png",
-          caption: "Scalable cloud pipeline connecting Android App → Firebase Auth & Storage → Cloud Run FastAPI → PyTorch U-Net Model → Firestore Realtime → Android Results.",
-        },
       ],
 
       measurableOutcomes: [
