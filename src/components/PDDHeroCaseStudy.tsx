@@ -142,7 +142,7 @@ export const PDDHeroCaseStudy: React.FC = () => {
             <div className="flex gap-2">
               {[
                 { id: "overview", label: "Clinical Problem & Solution" },
-                { id: "screenshots", label: "Real Screenshots (6)" },
+                { id: "screenshots", label: "Real Screenshots (11)" },
                 { id: "architecture", label: "System Architecture" },
                 { id: "pipeline", label: "PyTorch U-Net AI Pipeline" },
                 { id: "challenges", label: "Challenges & Lessons Learned" },
@@ -212,7 +212,7 @@ export const PDDHeroCaseStudy: React.FC = () => {
                   <div className="lg:col-span-5 relative group">
                     <div className="relative rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl">
                       <Image
-                        src={getAssetPath("/images/pdd/pdd_results.png")}
+                        src={getAssetPath(project.image)}
                         alt="PDD 3D Nerve Segmentation Result"
                         width={600}
                         height={400}
@@ -225,7 +225,7 @@ export const PDDHeroCaseStudy: React.FC = () => {
                           <div className="text-[10px] text-cyan-400 font-mono">Dice Score: 0.89 • Latency: 2.05s</div>
                         </div>
                         <button
-                          onClick={() => setSelectedImage(getAssetPath("/images/pdd/pdd_results.png"))}
+                          onClick={() => setSelectedImage(getAssetPath(project.image))}
                           className="p-2 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/40 transition-colors"
                         >
                           <Maximize2 className="w-4 h-4" />
@@ -299,15 +299,16 @@ export const PDDHeroCaseStudy: React.FC = () => {
                   <div className="lg:col-span-8 relative group">
                     <div className="relative rounded-2xl overflow-hidden border border-cyan-500/40 shadow-2xl bg-slate-950">
                       <Image
-                        src={caseStudy.screenshots[activeScreenshotIdx].image}
+                        src={getAssetPath(caseStudy.screenshots[activeScreenshotIdx].image)}
                         alt={caseStudy.screenshots[activeScreenshotIdx].title}
                         width={900}
                         height={600}
                         className="w-full h-auto max-h-[500px] object-contain mx-auto"
                       />
                       <button
-                        onClick={() => setSelectedImage(caseStudy.screenshots[activeScreenshotIdx].image)}
+                        onClick={() => setSelectedImage(getAssetPath(caseStudy.screenshots[activeScreenshotIdx].image))}
                         className="absolute top-4 right-4 p-3 rounded-full bg-slate-950/80 text-cyan-400 hover:text-white border border-cyan-500/30 transition-all hover:scale-110"
+                        title="View Full Resolution"
                       >
                         <Maximize2 className="w-5 h-5" />
                       </button>
@@ -315,20 +316,39 @@ export const PDDHeroCaseStudy: React.FC = () => {
                   </div>
 
                   <div className="lg:col-span-4 space-y-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 inline-block">
-                      {caseStudy.screenshots[activeScreenshotIdx].category}
-                    </span>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 inline-block">
+                        {caseStudy.screenshots[activeScreenshotIdx].category}
+                      </span>
+                      <span className="text-[11px] text-slate-500 font-mono">
+                        {activeScreenshotIdx + 1} of {caseStudy.screenshots.length}
+                      </span>
+                    </div>
+
                     <h4 className="text-xl font-bold text-white">
                       {caseStudy.screenshots[activeScreenshotIdx].title}
                     </h4>
+
                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed p-4 rounded-xl bg-slate-900 border border-slate-800">
                       {caseStudy.screenshots[activeScreenshotIdx].caption}
                     </p>
+
+                    {caseStudy.screenshots[activeScreenshotIdx].driveUrl && (
+                      <a
+                        href={caseStudy.screenshots[activeScreenshotIdx].driveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 hover:text-cyan-300 text-xs font-semibold border border-cyan-500/30 transition-all hover:scale-105"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>View in Google Drive</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
                 {/* Thumbnail Strip */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                   {caseStudy.screenshots.map((s, idx) => (
                     <button
                       key={s.id}
@@ -340,11 +360,11 @@ export const PDDHeroCaseStudy: React.FC = () => {
                       }`}
                     >
                       <Image
-                        src={s.image}
+                        src={getAssetPath(s.image)}
                         alt={s.title}
                         width={200}
                         height={140}
-                        className="w-full h-24 object-cover"
+                        className="w-full h-20 object-cover"
                       />
                       <div className="p-2 bg-slate-950/90 text-[10px] font-bold text-slate-300 truncate">
                         {s.title}

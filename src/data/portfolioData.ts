@@ -17,6 +17,7 @@ export interface CaseStudyScreenshot {
   title: string;
   category: string;
   image: string;
+  driveUrl?: string;
   caption: string;
 }
 
@@ -205,7 +206,7 @@ export const PORTFOLIO_DATA = {
     technologies: ["Android (Kotlin)", "Jetpack Compose", "FastAPI", "PyTorch U-Net", "Firebase Auth", "Firestore Realtime", "Docker", "GCP Cloud Run", "NiBabel"],
     githubUrl: "https://github.com/dinnepatiprasad56-design/IAN_DETECTION_STUDIO",
     liveUrl: "https://github.com/dinnepatiprasad56-design/IAN_DETECTION_STUDIO",
-    image: "/images/pdd/pdd_results.png",
+    image: "https://lh3.googleusercontent.com/d/1aOpHZ7n0tDf74LcMIG-tijU0-4Y9idr1",
     caseStudy: {
       title: "PDD: Research-Grade Medical File Processor & 3D Segmentation Platform",
       subtitle: "Deterministic Data Lineage, PyTorch U-Net Neural Segmentation & Realtime Firestore Sync in Medical Vision",
@@ -218,39 +219,84 @@ export const PORTFOLIO_DATA = {
       
       screenshots: [
         {
-          id: "login",
-          title: "Android Clinician Login Screen",
-          category: "Authentication",
-          image: "/images/pdd/pdd_login.png",
-          caption: "FirebaseAuthInterceptor token injection injecting Bearer JWT headers with biometric authentication and 5s token timeout protection.",
-        },
-        {
           id: "dashboard",
-          title: "Clinician Patient Dashboard",
-          category: "Realtime Telemetry",
-          image: "/images/pdd/pdd_dashboard.png",
-          caption: "Centralized dashboard tracking patient CBCT uploads, active GPU inference jobs, risk badges (High Risk <2mm), and telemetry.",
+          title: "Clinician Command Center & Case Overview",
+          category: "Dashboard",
+          image: "https://lh3.googleusercontent.com/d/1Hjr9u403hFBoTb23x_aipL3hWtj3l3xy",
+          driveUrl: "https://drive.google.com/file/d/1Hjr9u403hFBoTb23x_aipL3hWtj3l3xy/view?usp=drive_link",
+          caption: "Centralized workspace monitoring patient CBCT scans, AI inference throughput, urgent risk flags, and clinical queue.",
         },
         {
-          id: "upload",
-          title: "Volumetric CBCT / NIfTI Uploader",
-          category: "Data Ingestion",
-          image: "/images/pdd/pdd_upload.png",
-          caption: "High-speed upload manager handling large multi-slice DICOM/NIfTI archives with automatic Hounsfield Unit validation and exponential backoff retry.",
+          id: "segmentation-1",
+          title: "3D Inferior Alveolar Nerve Neural Segmentation",
+          category: "AI Segmentation",
+          image: "https://lh3.googleusercontent.com/d/1aOpHZ7n0tDf74LcMIG-tijU0-4Y9idr1",
+          driveUrl: "https://drive.google.com/file/d/1aOpHZ7n0tDf74LcMIG-tijU0-4Y9idr1/view?usp=sharing",
+          caption: "High-precision volumetric segmentation isolating the mandibular nerve canal with multi-planar orthogonal slice correlation.",
         },
         {
-          id: "processing",
-          title: "Cloud Run + PyTorch U-Net Processing Screen",
-          category: "AI Engine",
-          image: "/images/pdd/pdd_processing.png",
-          caption: "Real-time asynchronous U-Net tensor inference screen with patch slicing, GPU/CPU metrics, and live axial slice progress tracking.",
-        },
-        {
-          id: "results",
-          title: "3D Segmentation Results & Reproducibility Report",
+          id: "segmentation-2",
+          title: "Multi-Angle 3D Volumetric Mesh & Proximity Mapping",
           category: "3D Visualization",
-          image: "/images/pdd/pdd_results.png",
-          caption: "Interactive 3D mandibular jaw rendering highlighting the segmented nerve canal, color-coded safety proximity boundaries, and report.json metric output.",
+          image: "https://lh3.googleusercontent.com/d/1IqP4b4pCJhoXiraoFLfKlpSbzxlc_nQ2",
+          driveUrl: "https://drive.google.com/file/d/1IqP4b4pCJhoXiraoFLfKlpSbzxlc_nQ2/view?usp=sharing",
+          caption: "Real-time 3D rendered jaw mesh with color-coded safety margins (<2mm warning) for pre-surgical implant risk mitigation.",
+        },
+        {
+          id: "ai-processing",
+          title: "PyTorch U-Net Real-Time Tensor Inference",
+          category: "AI Engine",
+          image: "https://lh3.googleusercontent.com/d/1P12xizMUspYiLVY2S4Y9FnbAV7aF-rTy",
+          driveUrl: "https://drive.google.com/file/d/1P12xizMUspYiLVY2S4Y9FnbAV7aF-rTy/view?usp=sharing",
+          caption: "Live tensor execution screen displaying batch slice inference, CUDA memory consumption, and progress telemetry.",
+        },
+        {
+          id: "analytics",
+          title: "Volumetric Metrics & Dice Coefficient Analytics",
+          category: "Analytics",
+          image: "https://lh3.googleusercontent.com/d/12YMt2-DA6zts6KCiWhnD-scn9kJkwSQN",
+          driveUrl: "https://drive.google.com/file/d/12YMt2-DA6zts6KCiWhnD-scn9kJkwSQN/view?usp=sharing",
+          caption: "Quantitative clinical telemetry tracking Dice similarity coefficients (0.89+), voxel volume measurements (130.88ml), and latency.",
+        },
+        {
+          id: "patient-record",
+          title: "Patient Diagnostic Record & CBCT Lineage",
+          category: "Patient Management",
+          image: "https://lh3.googleusercontent.com/d/1k05m_vzTYOBIeRNADzeJlHKCITrVN63Z",
+          driveUrl: "https://drive.google.com/file/d/1k05m_vzTYOBIeRNADzeJlHKCITrVN63Z/view?usp=sharing",
+          caption: "Comprehensive patient profile logging DICOM/NIfTI metadata, scan date, clinician notes, and diagnostic history.",
+        },
+        {
+          id: "task-processing",
+          title: "Asynchronous Background Inference Queue",
+          category: "Cloud Pipeline",
+          image: "https://lh3.googleusercontent.com/d/1IRI3rFjSayBD6orIzR6m_DanQxmqF8h9",
+          driveUrl: "https://drive.google.com/file/d/1IRI3rFjSayBD6orIzR6m_DanQxmqF8h9/view?usp=sharing",
+          caption: "Distributed task runner tracking background jobs across UPLOADING, QUEUED, PROCESSING, and COMPLETED states.",
+        },
+        {
+          id: "history",
+          title: "Audit Trail & Reproducible SHA-256 Logs",
+          category: "Audit & Lineage",
+          image: "https://lh3.googleusercontent.com/d/1p5cEZj8R4y1A1tN_qKeTyKKc-9DUjXdQ",
+          driveUrl: "https://drive.google.com/file/d/1p5cEZj8R4y1A1tN_qKeTyKKc-9DUjXdQ/view?usp=sharing",
+          caption: "Immutable clinical audit log tracking deterministic SHA-256 data hashes, model commit versions, and execution records.",
+        },
+        {
+          id: "settings",
+          title: "Inference Engine & Model Configuration",
+          category: "System Config",
+          image: "https://lh3.googleusercontent.com/d/1M5iDEfgL8cEZcdXuTzaYtxarSBpLlf8n",
+          driveUrl: "https://drive.google.com/file/d/1M5iDEfgL8cEZcdXuTzaYtxarSBpLlf8n/view?usp=sharing",
+          caption: "Clinician control panel configuring GPU acceleration thresholds, Hounsfield Unit windowing, and FastAPI Cloud Run endpoints.",
+        },
+        {
+          id: "profiles",
+          title: "Clinician Profile & Security Credentials",
+          category: "Authentication",
+          image: "https://lh3.googleusercontent.com/d/19eADJ0uVX4FEjvgvQ6DXvvg3K0Bh6Itt",
+          driveUrl: "https://drive.google.com/file/d/19eADJ0uVX4FEjvgvQ6DXvvg3K0Bh6Itt/view?usp=sharing",
+          caption: "Role-based access control interface with biometric session authentication, JWT token expiry, and user credential management.",
         },
         {
           id: "architecture",
