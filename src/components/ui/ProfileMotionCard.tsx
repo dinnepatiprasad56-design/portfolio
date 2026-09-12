@@ -113,7 +113,7 @@ export const ProfileMotionCard: React.FC<ProfileMotionCardProps> = ({
           <div className="relative w-full h-[360px] sm:h-[420px] overflow-hidden bg-slate-950">
             <Image
               src={profilePhoto}
-              alt="Dinnepati Sindhu Prasad - Software Engineer & AI Specialist"
+              alt="Dinnepati Sindhu Prasad - Software Engineer & Cloud Engineer"
               fill
               quality={95}
               priority
@@ -155,7 +155,7 @@ export const ProfileMotionCard: React.FC<ProfileMotionCardProps> = ({
                 DINNEPATI SINDHU PRASAD
               </h4>
               <p className="text-[11px] text-cyan-400 font-mono mt-0.5">
-                Software Engineer • Android & Cloud Specialist
+                Software Engineer • Cloud Engineer • Cyber & Networks
               </p>
             </div>
             <Sparkles className="w-4 h-4 text-amber-400" />

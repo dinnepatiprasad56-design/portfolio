@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
             <div>
               <span className="font-bold text-sm text-slate-100">{PORTFOLIO_DATA.personal.name}</span>
               <p className="text-[11px] text-slate-400 font-mono">
-                Software Engineer • AI & Cloud Specialist
+                Software Engineer • Cloud Engineer • Cyber & Networks
               </p>
             </div>
           </div>
