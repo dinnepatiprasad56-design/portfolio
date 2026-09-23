@@ -115,9 +115,9 @@ export const PORTFOLIO_DATA = {
       email: "mailto:dinnipatiprasad@gmail.com",
       whatsapp: "https://api.whatsapp.com/send?phone=917285931308&text=Hi%20Sindhu%20Prasad,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.",
       gmail: "https://mail.google.com/mail/?view=cm&fs=1&to=dinnipatiprasad@gmail.com",
-      resumeUrl: "https://drive.google.com/file/d/16voYeC3-XknxWEIf0luRUjlw9ennVrn9/view?usp=sharing",
-      resumeDownloadUrl: "https://drive.google.com/uc?export=download&id=16voYeC3-XknxWEIf0luRUjlw9ennVrn9",
-      resumePreviewUrl: "https://drive.google.com/file/d/16voYeC3-XknxWEIf0luRUjlw9ennVrn9/preview",
+      resumeUrl: "https://drive.google.com/file/d/1wCMwIDD6jcLbbOQP7jc3AXm3KHypD1jY/view?usp=sharing",
+      resumeDownloadUrl: "https://drive.google.com/uc?export=download&id=1wCMwIDD6jcLbbOQP7jc3AXm3KHypD1jY",
+      resumePreviewUrl: "https://drive.google.com/file/d/1wCMwIDD6jcLbbOQP7jc3AXm3KHypD1jY/preview",
     },
     quickStats: [
       { label: "Academic Standout", value: "8.93 CGPA", detail: "SIMATS Engineering" },
