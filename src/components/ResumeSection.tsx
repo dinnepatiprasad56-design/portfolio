@@ -28,7 +28,7 @@ export const ResumeSection: React.FC = () => {
     resume: {
       label: "Official Resume",
       url: PORTFOLIO_DATA.personal.socialLinks.resumeUrl,
-      displayUrl: "drive.google.com/file/d/1wCMwIDD...",
+      displayUrl: "drive.google.com/file/d/129u9_3i...",
       description: "Direct camera scan to access and download the official placement resume on Google Drive.",
     },
     github: {
